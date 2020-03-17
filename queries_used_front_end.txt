@@ -1,0 +1,16 @@
+SELECT * from admin;
+SELECT * from student;
+SELECT d_name from department WHERE d_id='$r[4];
+SELECT * from professor;
+SELECT d_name from department WHERE d_id='$r1[5]';
+SELECT * FROM Courses;
+SELECT * FROM topic;
+SELECT name from topic WHERE c_id='$row[0]';
+SELECT professor from topic where name='$tmp';
+select * from videos where e_id in (select e_id from professor as p where p.name='$row[0]');
+SELECT * from videos where v_id='$tmp';
+SELECT * from discussion_forum where v_id='$tmp';
+SELECT * from questions where f_id='$f_id';
+(SELECT name from professor where e_id='$val') UNION(select name from student where srn='$val') ;
+INSERT INTO questions values('$q_id','$question','$date',NULL,'$tmp','$srn');
+INSERT INTO answers values('$a_id','$date',0,'$answer','$srn','$tmp',NULL)
